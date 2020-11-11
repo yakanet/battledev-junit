@@ -15,7 +15,7 @@ import java.util.stream.Stream
 
 
 const val ANSI_RESET = "\u001B[0m"
-const val ANSI_BLUE = "\u001B[34m";
+const val ANSI_BLUE = "\u001B[34m"
 
 class SampleRunnerTest {
 
@@ -45,7 +45,7 @@ class SampleRunnerTest {
     fun sampleCases(): Stream<DynamicTest> {
         return loadSamples(zipSamplePath).map { sample: InputOutputSample ->
             executors.stream().map { executor ->
-                val executorName = executor::class.simpleName!!.substringBeforeLast("Executor")
+                val executorName = executor.name
                 DynamicTest.dynamicTest("[$executorName] Test " + sample.index) {
                     println("${ANSI_BLUE}[$executorName] Running Test ${sample.index}${ANSI_RESET}")
 

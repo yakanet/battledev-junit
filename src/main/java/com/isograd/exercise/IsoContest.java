@@ -11,6 +11,7 @@ public class IsoContest {
         String line;
         Scanner sc = new Scanner(System.in);
         Map<String, List<String>> result = new HashMap<>();
+        sc.nextLine();
         while (sc.hasNextLine()) {
             line = sc.nextLine();
             String[] parts = line.split(" ");
