@@ -35,7 +35,6 @@ class SampleRunnerTest {
             PhpExecutor("src\\main\\php\\main.php")
     )
 
-
     /**
      * Display output
      */

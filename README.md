@@ -1,4 +1,6 @@
-# How to use
+# Battledev Junit Project
+
+## How to use
 
 You can use this project with the [IsoGrad](https://www.isograd.com/FR/solutionconcours.php) or [BattleDev](https://battledev.blogdumoderateur.com/) platforms.
 
@@ -11,24 +13,24 @@ Fill in the `executors` variable with the technology you want to use (you can co
 ```kotlin
 // Example for PHP
 private val executors = listOf(
-        PhpExecutor("src\\main\\php\\main.php")
+    PhpExecutor("src\\main\\php\\main.php")
 )
 
 // Example for Python
 private val executors = listOf(
-        Python3Executor("src\\main\\python\\main.py"),
+    Python3Executor("src\\main\\python\\main.py"),
 )
 
 
 // Example for Java
 private val executors = listOf(
-        JavaExecutor(IsoContest::main),
+    JavaExecutor(IsoContest::main),
 )
 
 
 // Example for Kotlin
 private val executors = listOf(
-        KotlinExecutor(::main),
+    KotlinExecutor(::main),
 )
 ```
 
@@ -42,3 +44,10 @@ mvnw test
 > Tips: If you are using Intellij, you can use the green arrow in the [SampleRunnerTest](src/test/kotlin/com/github/yakanet/battledev/junit/SampleRunnerTest.kt) file and enjoy the JUnit report integrated in Intellij.
 
 > Tips: If you only use one technology, you can delete the others folders in the src/main folder to speed up the compilation time.
+
+## Todo
+
+- [ ] Debug mode for Python (pdb ?)
+- [ ] Debug mode for PHP (Xdebug)
+- [ ] Allow using directly the URL link for the sample file (instead of download the file and set the location on the filesystem)
+- [ ] Externalize Executor, zipSamplePath, and showOutput in a dedicated configuration file
